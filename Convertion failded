@@ -1,0 +1,33 @@
+#Python
+
+enter_number = input("write number : ")
+
+converstion_number = input("select the unit (c=cmtom , m=mtocm , mi=miletom , micm=miletocm  ) : ")
+
+enter_number = int(enter_number)
+
+xyz = ('A_small_converstion_python_code')
+
+if converstion_number == 'c':
+    converted = enter_number / 100
+    print ('=}  len in meters : ' + str(converted) )
+    
+elif converstion_number == 'm':
+    converted = enter_number * 100
+    print('=}  len in centimeters :' + str(converted) )
+
+elif converstion_number == 'mi':
+    converted = enter_number * 1634 
+    print(" =} len converted to meters from mile : " + str(converted) )
+
+
+elif converstion_number == 'micm':
+    converted = enter_number * 16034 
+    print(" =} len converted to centimeters from mile : " + str(converted) )
+
+
+print(xyz)
+
+
+
+

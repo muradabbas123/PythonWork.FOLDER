@@ -1,0 +1,41 @@
+import random
+
+# Questions and answers
+questions = {
+    "What is the capital of France?": "Paris",
+    "Who painted the Mona Lisa?": "Leonardo da Vinci",
+    "What is the largest planet in our solar system?": "Jupiter",
+    "Who is the author of 'Pride and Prejudice'?": "Jane Austen",
+    "What is the chemical symbol for gold?": "Au"
+}
+
+# Function to ask a random question
+
+def ask_question():
+
+    question = random.choice(list(questions()))
+    answer = questions[question]
+    
+    user_answer = input(question + " ")
+    
+    if user_answer.lower() == answer.lower():
+        print("Correct!")
+    else:
+        print("Incorrect. The correct answer is:", answer)
+
+# Main game loop
+def play_game():
+    print("Welcome to the General Knowledge Game!")
+    print("Type 'quit' to exit the game.")
+    
+    while True:
+        ask_question()
+        play_again = input("Do you want to play again? (yes/no) ")
+        
+        if play_again.lower() != "yes":
+            break
+    
+    print("Thanks for playing!")
+
+# Start the game
+play_game()
